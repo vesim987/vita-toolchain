@@ -269,6 +269,7 @@ void vita_nid_db_gen_asm(NidStub *stub, DBEntry *entry, int is_function){
 	}
 
 	fprintf(fp, "\t.align 4\n");
+	fprintf(fp, "\t.thumb\n");
 	fprintf(fp, "\t.global %s\n", entry->name);
 
 	if(is_function != 0){
